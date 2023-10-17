@@ -5,7 +5,7 @@
 </p>
 
 ---
-## Fission
+## Fission Alpha v0
 <p align="left">
   <img src="Fissionv0alphaSticker.png" alt="Code example in Fission" width="48%" height="48%">
 </p>
