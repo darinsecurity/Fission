@@ -5,10 +5,13 @@
 </p>
 
 ---
-
 ## Fission
+<p align="left">
+  <img src="Fissionv0alphaSticker.png" alt="Code example in Fission" width="48%" height="48%">
+</p>
 
-**Fission** is a **powerful mathematical interpreter** that supports **arbitrary precision calculation** of common math functions, while having the features of many other programming languages. 
+
+**Fission** is a **powerful mathematical interpreter** with support for **arbitrary precision calculation** of common math functions, while having the features of many other programming languages. 
 
 Fission is **a secure language** and does not include any direct code execution compared to Python's *eval()* and supports many mathematical functions. Features / libraries can be toggled and you can create your own programs in Fission that support full and native high precision execution. 
 
