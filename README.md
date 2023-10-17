@@ -1,4 +1,4 @@
-# Fission Programming Language
+# Fission Math
 
 <p align="center">
   <img src="FissionlogoSpectre.png" alt="Fission Logo">
