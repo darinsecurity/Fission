@@ -13,7 +13,7 @@
 
 **Fission** is a **powerful mathematical interpreter** with support for **arbitrary precision calculation** of common math functions, while having the features of many other programming languages. 
 
-Fission is **a secure language** and does not include any direct code execution compared to Python's *eval()* and supports many mathematical functions. Features / libraries can be toggled and you can create your own programs in Fission that support full and native high precision execution. 
+Fission is **a secure language** and does not include any direct code execution compared to Python's *eval()* and supports many mathematical functions. Features / libraries can be toggled and you can create your own programs in Fission that support full and native high precision execution. Ex: an online math interpreter with support for calculus.
 
 
 ---
@@ -32,9 +32,9 @@ Currently, lists, strings, and numbers are implemented, with support to be added
 
 ## Numbers
 
-Numbers are a universal data type tnat cover both integers, floats, and complex numbers. 
+Numbers are a universal data type that encompass integers, floats, and complex numbers. 
 
-You can convert any string that expresses a float or an integer (with support for complex nums coming soon) into a 'num' type.
+You can convert any string that expresses a float, or complex number into a 'num' type.
 
 ```
 >> string = "2"
@@ -154,6 +154,10 @@ Expressions like `2+3(4+5)` are evaluated as `2 + 3*(4+5)`
 29
 ```
 
+#### To Come Soon
++ Factorials with `!` syntax
+
+
 ### Imaginary Values
 
 As the mpmath and Python native implementation of complex values is `j` for sqrt(-1) and "(a+b`j`)" for complex numbers, Fission follows the same format.
@@ -164,6 +168,14 @@ As the mpmath and Python native implementation of complex values is `j` for sqrt
 (0 + 1j)
 >>> j
 (0 + 1j)
+```
+
+Converting imaginary numbers to strings and vice versa also works:
+```
+>>> str(1+2j)
+"(1 + 2j)"
+>>> num("1 + 2j")
+(1 + 2j)
 ```
 
 
