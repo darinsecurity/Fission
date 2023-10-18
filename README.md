@@ -86,6 +86,86 @@ Precision set to 10000000.0
 (8.7s): 3.1415926358979323846...
 ```
 
+#### Example Program
+
+A program that asks the user for a number of digits, then saves to disk pi up to that number of digits the file `pi-{digits}`.
+The program saves the current precision and restores it after the calculation. 
+It also measures the time elapsed of the high precision calculation with `time.perf_counter()`.
+```
+// Clear the console
+clear_console()
+// Save the current precision
+initial_precision = working_prec
+
+print("Fission Pi Calculator")
+precision = num(input("Enter precision in digits: (>2): "))
+setprec(precision)
+print("Starting..")
+start_time = time.perf_counter()
+os.save_to_disk(pi, "w+", "pi-"+str(precision)+"-digits")
+end_time = time.perf_counter() - start_time
+print("Success! Took " + str(round(end_time, 9)) + " seconds!")
+// Revert back
+setprec(initial_precision)
+```
+
+#### Additional Information
+
+Calculations are done with mpmath and numbers are stored as either `mpf` or `mpc` types in Python. 
+
+## Mathematical Functions
+
+Some standard mathematical functions that are implemented include:
++ zeta(s,a)
++ sqrt(z)
++ log(x, b) (Default base is `e`)
++ exp()
+
+With many more standard mathematical functions to come soon (Gamma(), Factorial(), etc.)
+All functions that can accept imaginary values in their mathematical definition will in Fission.
+```
+>>> sqrt(-1)
+(0+1j)
+```
+
+Expect a fully-equipped calculator after alpha. 
+
+## PEMDAS / Calculation
+
+All expressions are evaluated in proper PEMDAS order
+```
+>>> 2*4+2
+10
+>>> -2^2
+-4
+>>> (2+3)(4+5)
+45
+>>> 2(pi)
+6.28315..
+>>> pi(2)
+6.28315..
+>>> 2pi - 2e
+0.846621650261496006
+```
+
+Expressions like `2+3(4+5)` are evaluated as `2 + 3*(4+5)`
+```
+>>> 2+3(4+5)
+29
+```
+
+### Imaginary Values
+
+As the mpmath and Python native implementation of complex values is `j` for sqrt(-1) and "(a+b`j`)" for complex numbers, Fission follows the same format.
+```
+>>> sqrt(-1)
+(0 + 1j)
+>>> i
+(0 + 1j)
+>>> j
+(0 + 1j)
+```
+
 
 - **Feature 1**: A brief description of this feature.
 - **Feature 2**: Explanation of what this feature does and why it's essential.
