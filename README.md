@@ -130,7 +130,7 @@ All functions that can accept imaginary values in their mathematical definition 
 
 Expect a fully-equipped calculator after alpha. 
 
-## PEMDAS / Calculation
+## Order / Calculation
 
 <p align="center">
   <img src="FissionPoster.png" width="50%" height="50%">
