@@ -132,6 +132,14 @@ Expect a fully-equipped calculator after alpha.
 
 ## PEMDAS / Calculation
 
+<p align="center">
+  <img src="FissionPoster.png" width="50%" height="50%">
+</p>
+<p style="text-align: center;">
+  <h4 style="text-align: center;">Fission uses mpmath and sympy for high precision symbolic computations. Thanks to the developers of these projects for making Fission possible.</h4>
+</p>
+
+
 All expressions are evaluated in proper PEMDAS order
 ```
 >>> 2*4+2
