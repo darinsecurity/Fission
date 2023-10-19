@@ -140,7 +140,7 @@ Expect a fully-equipped calculator after alpha.
 </p>
 
 
-All expressions are evaluated in proper PEMDAS order
+All expressions are evaluated in proper order in alignment with Wolfram Alpha:
 ```
 >>> 2*4+2
 10
@@ -155,6 +155,18 @@ All expressions are evaluated in proper PEMDAS order
 >>> 2pi - 2e
 0.846621650261496006
 ```
+
+The age old problem surrounding "PEMDAS" and other acronyms for order is are expressions like `6 / 2(1+2)`.
+According to PEMDAS, this should be evaluated like `6 / 2(1+2)` -> `6 / 2(3)` -> `6/6` = `1`, but many calculators return conflicting results.
+It can also be evaluted as `(6/2)(1+2)` which would be `9` in this case.
+
+Fission evalutes this problem like Wolfram Alpha and many other calculators do as `9`.
+```
+>>> 6 / 2(1+2)
+9
+```
+Although, be aware that such notation is unclear and would not be used in practice. 
+
 
 Expressions like `2+3(4+5)` are evaluated as `2 + 3*(4+5)`, and `pi^2/6` like `(pi^2)/6`.
 This differs from Wolfram Alpha's notation of considering fractions as their own set (`pi^2/6` as `pi^(2/6)`). There will be an option to toggle this in the future. 
