@@ -156,10 +156,13 @@ All expressions are evaluated in proper PEMDAS order
 0.846621650261496006
 ```
 
-Expressions like `2+3(4+5)` are evaluated as `2 + 3*(4+5)`
+Expressions like `2+3(4+5)` are evaluated as `2 + 3*(4+5)`, and `pi^2/6` like `(pi^2)/6`.
+This differs from Wolfram Alpha's notation of considering fractions as their own set (`pi^2/6` as `pi^(2/6)`). There will be an option to toggle this in the future. 
 ```
 >>> 2+3(4+5)
 29
+>>> pi^2/6-zeta(2)
+0
 ```
 
 #### To Come Soon
